@@ -1,0 +1,784 @@
+/*====================================================
+                        SUMMARY
+======================================================
+
+    - Variable 
+    - General 
+    - Components
+        - Header 
+        - Cards 
+        - Footer 
+    - Content 
+    - Class general 
+    - Scrollbar 
+
+    Legend : 
+    - #FF0000
+        -#00FF00
+            -#0000FF
+*/
+
+/*====================================================
+                    VARIABLE #FF0000
+====================================================*/
+:root{
+    /* == Background == */
+    --background-linear-1: hsla(266, 100%, 51%, 0.15);
+    --background-linear-2: hsla(0, 0%, 0%, 0.15);
+    --background-solid: #12092c;
+    --background: linear-gradient(180deg, var(--background-linear-1) 0%, var(--background-linear-2) 100%), var(--background-solid);
+
+    /* == Color == */
+    --white: hsl(260, 60%, 99%);
+    --purple: hsl(256, 66%, 67%);
+    --black: hsl(255, 65%, 10%);
+    --black-black: hsla(0, 0%, 0%,0.4);
+    --gray: hsl(255, 20%, 65%);
+    --success: hsl(125, 100%, 30%);
+    --error: hsl(0, 100%, 30%);
+
+    /* == Shadow == */
+    --shadow-color: hsla(255, 65%, 90%, 0.22);
+    --shadow-x: 2px;
+    --shadow-y: 4px;
+    --shadow-blur: 10px;
+    --shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);  
+
+    /* == Fonts == */
+    --font-color: var(--white);
+
+    /* == Navbar/Footer == */
+    --navbar-background: linear-gradient(180deg, var(--black-black) 0%, rgba(0, 0, 0, 0) 100%);
+    --footer-background: linear-gradient(0deg, var(--black-black) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================================
+                    General #FF0000
+====================================================*/
+*{margin:0;padding:0;perspective: 1px;}
+
+html{
+    min-height: 100vh;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    background: var(--background);
+
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--font-color);
+    letter-spacing: -0.02em;
+    font-weight: bold;
+}
+body::after{
+    content: '';
+    display: block;
+    height: 120px;
+}
+
+
+a{color: var(--font-color); text-decoration: none;}
+a:visited{color: var(--font-color);}
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    z-index: 10;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================================
+                    Components #FF0000
+====================================================*/
+        /*====================================================
+                            Header #00FF00
+        ====================================================*/
+        nav{
+            background: var(--navbar-background);
+            height: 130px;
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-left{
+            margin-right:200px;
+        }
+        .nav-name{
+            font-size: 36px;
+            
+            line-height: 42px;
+
+            text-shadow: var(--shadow);
+        }
+
+
+        .nav-item{
+            position: relative;
+            font-size: 24px;
+
+            line-height: 28px;
+
+            text-shadow: var(--shadow);
+        }
+
+        .nav-right a + a{
+            margin-left:80px;
+        }
+
+        .nav-right{
+            text-align: center;
+        }
+        
+        .nav-item:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--white);
+            transform-origin: bottom right;
+            transition: transform 0.20s ease-out;
+        }
+
+        .nav-item:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .nav-item.active:after{
+            transform: scaleX(1);
+        }
+          
+        
+        @media screen and (max-width: 887px) {
+            nav{      
+                justify-content: space-between !important;
+            }
+        
+            .nav-left{
+                margin-left: 10px;
+                margin-right: 0 !important;
+            }
+            .nav-right a + a{
+                margin-left:30px;
+            }
+            .nav-right{
+                padding-right:10px;
+            }
+        }
+
+        @media screen and (max-width: 335px) {
+            .nav-right{
+                text-align: end;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        /*====================================================
+                            Cards #00FF00
+        ====================================================*/
+        .group-cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+            
+        }
+
+        .card-me .card-text, .card-me .card-SchoolName{
+            display: flex;
+            justify-content: center;
+            position:relative;
+            top:2px;
+
+            color: var(--black);
+
+            font-style: normal;
+            font-size: 20px;
+            line-height: 23px;
+
+            border-radius: 20px;
+        }
+
+        .card-url{
+            transform: translateZ(0) scale(1);
+            transition: transform 0.20s ease-out;
+        }
+        .card-url:hover{
+            position: relative;
+            z-index: 2;
+            transform: translateZ(0) scale(1.1);
+        }   
+
+
+                /*====================================================
+                                    Cards-Project #0000FF
+                ====================================================*/
+                .card-project{
+                    width: 400px;
+                    height: 350px;
+                    background-color: var(--white);
+                    border-radius: 20px;
+                    margin: 30px 20px;
+                    box-shadow: var(--shadow);
+
+                }
+
+                .card-project .card-image{
+                    width: 400px;
+                    height: 280px;
+                    border-radius: 17px 17px 0px 0px;
+                    object-fit: cover;
+                }
+
+                .card-project .card-text{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 65px;
+                    color: var(--black);
+
+                    font-style: normal;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+                    
+                @media screen and (max-width: 420px) {
+                    .card-project{
+                        width: 320px !important;
+                        margin: 10px 0px;
+                    }
+
+                    .card-project .card-image{
+                        width: 320px !important;
+                    }
+
+                    .card-school{
+                        width: 320px !important;
+                        margin: 10px 0px;
+                    }
+                    .card-school .card-image-text, .card-school .card-image-text img, .card-image-blur{
+                        width: 320px !important;
+                    }
+
+                    .card-hobby{
+                        width: 320px !important;
+                        margin: 10px 0px;
+                    }
+                    .card-hobby .card-image{
+                        width: 320px !important;
+                    }
+                }
+
+
+
+
+
+                /*====================================================
+                                    Cards-School #0000FF
+                ====================================================*/
+                .card-school{
+                    position: relative;
+                    width: 380px;
+                    height: 190px;
+                    background-color: var(--white);
+                    border-radius: 20px;
+                    margin: 30px 20px;
+                    box-shadow: var(--shadow);
+                }
+
+                .card-school .card-image-text, .card-school .card-image-text img, .card-image-blur{
+                    width: 380px;
+                    height: 152px;
+                    border-radius: 17px 17px 0px 0px;
+                }
+
+                .card-school .card-image-text img{
+                    object-fit: cover;
+                }
+
+                .card-image-blur{
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.65);
+                    backdrop-filter: blur(2px);
+                    -webkit-backdrop-filter: blur(2px);
+                    z-index: 5;
+                }
+
+                .card-text-in-image{
+                    z-index: 10;
+                    position: absolute;
+                    top:50%;
+                    transform: translateY(-50%);
+                    width: 100%;
+                    font-style: normal;
+                    text-align: center;
+                }
+                .card-fontFiliere{
+                    font-size:20px;
+                }
+                .card-fontDate{
+                    font-size:16px;
+                }
+                .card-fontMention{
+                    font-size:16px;
+                }
+
+
+                .card-SchoolName{
+                    position: relative;
+                    top:5px !important;
+                }
+
+
+
+
+                /*====================================================
+                                    Cards-Hobby #0000FF
+                ====================================================*/
+                .card-hobby{
+                    width: 380px;
+                    height: 190px;
+                    background-color: var(--white);
+                    border-radius: 20px;
+                    margin: 30px 20px;
+                    box-shadow: var(--shadow);
+                }
+
+                .card-hobby .card-image{
+                    width: 380px;
+                    height: 152px;
+                    border-radius: 17px 17px 0px 0px;
+                    object-fit: cover;
+                }
+
+
+
+                /*====================================================
+                                    Cards-Software #0000FF
+                ====================================================*/
+                .card-software{
+                    width: 200px;
+                    height: 190px;
+                    background-color: var(--white);
+                    border-radius: 20px;
+                    margin: 30px 20px;
+                    box-shadow: var(--shadow);
+                }
+
+                .card-software .card-image{
+                    width: 200px;
+                    height: 152px;
+                    border-radius: 17px 17px 0px 0px;
+                    object-fit: cover;
+                }
+
+
+
+        /*====================================================
+                            Footer #00FF00
+        ====================================================*/
+        footer{
+            position:absolute;
+            bottom:0;
+            left: 0;
+
+            height: 80px;
+            width: 100%;
+
+            background: var(--footer-background);
+            display: flex;
+            align-items: center;
+        }
+
+        
+        .footer-items{
+            display: flex;
+            justify-content: space-evenly;
+
+            width: 100%;
+            margin: 0 200px;
+        }
+
+        .footer-item{
+            display: inline;
+
+            font-size: 20px;
+            line-height: 28px;
+            text-shadow: var(--shadow);
+        }
+
+        .footer-item .iconify{
+            position:relative;
+            top:3px;
+            right: -2px;
+        }
+
+        @media screen and (max-width: 1470px) {
+            body::after{
+                height: 160px;
+            }
+
+            footer{
+                height: 160px !important;
+            }
+            
+            .footer-items{
+                flex-direction: column;
+                margin: 0 !important;
+                align-items: center;
+            }
+
+            footer li{
+                margin-top:5px
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================================
+                    Projets #FF0000
+====================================================*/
+#projet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projet .presentation-img{
+    width: 95%;
+    border-radius: 20px;
+}
+
+#projet .card-software{
+    margin: 30px 30px;
+}
+
+
+#projet .button-site{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--white);
+    height: 110px;
+    width: 100%;
+    border-radius: 20px;
+
+    color: var(--black);
+    
+    border: 1px solid var(--black);
+
+    transition: all .25s;
+}
+
+#projet .button-site:hover{
+    background-color: transparent;
+    color:var(--white);
+    border-color:var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================================
+                    Contact #FF0000
+====================================================*/
+#contact.container{
+    width: 840px;
+}
+
+.message{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 20px;
+    padding: 20px 20px;
+
+    text-align: center;
+}
+
+.message a{
+    text-decoration: underline;
+}
+
+.messageSuccess{background-color: var(--success);}
+.messageError{background-color: var(--error);}
+
+
+
+.group-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text{
+    margin-bottom:10px;
+    
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.input{
+    margin-top:20px;
+}
+
+#contact input[name=email-user]{box-sizing: border-box; width: 450px;}
+#contact input[name=name-user], #contact select[name=object-mail]{
+    box-sizing: border-box;
+    width: 310px;
+}
+
+
+#contact textarea[name=message-mail]{
+    box-sizing: border-box;
+    width: 100%;
+    height: 180px;
+}
+
+#contact input, #contact select, #contact textarea{
+    background-color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+#contact input::placeholder, #contact textarea::placeholder{
+    opacity: 1;
+    color: var(--gray);
+}
+
+#contact .button-submit{
+    width: 100%;
+    height: 54px;
+    
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    border: 1px solid var(--black);
+
+    transition: all .25s;
+}
+
+#contact .button-submit:hover{
+    background-color: transparent;
+    color:var(--white);
+    border-color:var(--white);
+}
+
+@media screen and (max-width: 870px) {
+    #contact.container{
+        width: 100%;
+    }
+    #contact #form{
+        display: flex;
+        flex-direction: column;
+    }
+    .input{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .group-input{
+        flex-direction: column;
+    }
+    #contact input, #contact textarea, #contact select{
+        box-sizing: border-box;
+        width: 90% !important;
+    }
+    #contact select{
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================================
+                    Class general #FF0000
+====================================================*/
+.title-large{
+    margin-top:20px;
+    font-size: 45px;
+    text-align: center;
+    text-shadow: var(--shadow);
+}
+
+.text-large{
+    font-size: 36px;
+    text-align: center;
+    text-shadow: var(--shadow);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+.font-purple{color:var(--purple) !important;}
+
+.ml-80{margin-left: 80px;}
+
+.mt-10{margin-top: 10px;}
+.mt-20{margin-top: 20px;}
+.mt-30{margin-top: 30px;}
+.mt-40{margin-top: 40px;}
+.mt-60{margin-top: 60px;}
+
+.mb-30{margin-bottom:30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================================
+                    ScrollBar #FF0000
+====================================================*/
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--black); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+    background: var(--white); 
+}
