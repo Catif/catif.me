@@ -8,8 +8,9 @@ require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/header.php';
 
 
 <h2 class="title-large">Projet personnel : <span class="font-purple">Site vitrine</span></h2>
-<p class="text-large mt-30"><span class="font-purple">Création d'un site vitrine</span> qui permet de montrer mes différentes compétences en s'occupent de la partie <span class="font-purple">Back end</span> et <span class="font-purple">Front End</span>.</p>
-<p class="text-large mt-30">Projet fini en <span class="font-purple">Novembre 2021</span></p>
+<p class="text-large mt-30"><span class="font-purple">Création d'un site vitrine</span> qui présente mes différentes compétences dans le <span class="font-purple">domaine de l'informatique</span> et le <span class="font-purple">développement en générale</span>.</p>
+<p class="text-large mt-30">Réalisation de la partie <span class="font-purple">Back end</span> et <span class="font-purple">Front End</span>.</p>
+<p class="text-large mt-30"><span class="font-purple">Projet en cours</span></p>
 
 <img class="presentation-img mt-60" src="/assets/img/project/me_vitrine.webp">
 

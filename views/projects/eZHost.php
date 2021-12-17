@@ -9,7 +9,8 @@ require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/header.php';
 
 
 <h2 class="title-large">Projet : <span class="font-purple">eZHost</span></h2>
-<p class="text-large mt-30"><span class="font-purple">Création d'un site web</span> en s'occupent de la partie <span class="font-purple">Back end</span> et <span class="font-purple">Front End</span>.</p>
+<p class="text-large mt-30"><span class="font-purple">Création d'un site web</span> affichant les différentes offres de l'entreprise.</p>
+<p class="text-large mt-30">Réalisation de la partie <span class="font-purple">Back end</span> et <span class="font-purple">Front End</span>.</p>
 <p class="text-large mt-30">Projet fini en <span class="font-purple">Juin 2021</span></p>
 
 <img class="presentation-img mt-60" src="/assets/img/project/ezhost.webp">
