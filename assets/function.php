@@ -8,7 +8,8 @@ function createCard(
         array ...$card_url // [0] redirect to url AND [1] target true or false
     ): void{
 
-    require  $_SERVER['DOCUMENT_ROOT'] . '/assets/components/models/card.php';
+    $card_routeImg = HTML_ROOT . $card_routeImg;
+    require  PHP_ROOT . '/assets/components/models/card.php';
 }
 
 
@@ -24,7 +25,8 @@ function createCard_School(
         string ...$card_mention // mention of the diplome in the picture 
     ): void{
 
-    require  $_SERVER['DOCUMENT_ROOT'] . '/assets/components/models/card.php';
+    $card_routeImg = HTML_ROOT . $card_routeImg;
+    require  PHP_ROOT . '/assets/components/models/card.php';
 }
 
 
@@ -37,7 +39,7 @@ function createElementFooter(
         /* optionnel */
         string ...$footer_url // target blank to the url
     ): void{
-    require  $_SERVER['DOCUMENT_ROOT'] . '/assets/components/models/elementFooter.php';
+    require  PHP_ROOT . '/assets/components/models/elementFooter.php';
 }
 
 

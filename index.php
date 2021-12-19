@@ -1,7 +1,7 @@
 <?php
 $title = 'Accueil - Catif';
 $page = 'home';
-require $_SERVER['DOCUMENT_ROOT']."/assets/components/header.php";
+require "./assets/components/header.php";
 ?>
 
 
@@ -11,14 +11,15 @@ require $_SERVER['DOCUMENT_ROOT']."/assets/components/header.php";
 
 <div class="group-cards">
     <?php 
-        createCard('project','/assets/img/project/ezhost.webp','eZHost',['/projects/eZHost', false]);
-        createCard('project','/assets/img/project/ezhub.webp','eZHub',['/projects/eZHub', false]);
-        createCard('project','/assets/img/project/me_vitrine.webp','Site vitrine',['/projects/me_vitrine', false]);
+        createCard('project','/assets/img/project/stage_ezhost.webp','eZHost',[HTML_ROOT .'/projects/stage_eZHost', false]);
+        createCard('project','/assets/img/project/stage_ezhub.webp','eZHub',[HTML_ROOT .'/projects/stage_eZHub', false]);
+        createCard('project','/assets/img/project/me_vitrine.webp','Site vitrine',[HTML_ROOT .'/projects/me_vitrine', false]);
+        createCard('project','/assets/img/project/etud_Parc-Informatique.webp','Parc Informatique',[HTML_ROOT .'/projects/etud_Parc-Informatique', false]);
     ?>
 </div>
 
 
 <?php
 $absolute = true;
-require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/footer.php';
+require PHP_ROOT . '/assets/components/footer.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 $title = 'Projet : Site vitrine - Catif';
 $page = 'projet';
-require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/header.php';
+require dirname(__DIR__, 2) . "/assets/components/header.php";
 ?>
 
 
@@ -12,7 +12,7 @@ require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/header.php';
 <p class="text-large mt-30">Réalisation de la partie <span class="font-purple">Back end</span> et <span class="font-purple">Front End</span>.</p>
 <p class="text-large mt-30"><span class="font-purple">Projet en cours</span></p>
 
-<img class="presentation-img mt-60" src="/assets/img/project/me_vitrine.webp">
+<img class="presentation-img mt-60" src="<?= HTML_ROOT ?>/assets/img/project/me_vitrine.webp">
 
 <h2 class="title-large mt-60">Technologies utilisées :</h2>
 <div class="group-cards mt-40">
@@ -33,5 +33,6 @@ require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/header.php';
 
 <?php
 $absolute = false;
-require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/footer.php';
+require PHP_ROOT . '/assets/components/footer.php';
+
 ?>

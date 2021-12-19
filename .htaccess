@@ -14,7 +14,7 @@ Options All -Indexes
 
 # améliore le visuel des urls
 RewriteRule ^([a-zA-Z]+)$ /views/$1\.php
-RewriteRule ^projects/([a-zA-Z\_a-zA-Z]+)$ /views/projects/$1\.php
+RewriteRule ^projects/([a-zA-Z\_\-]+)$ /views/projects/$1\.php
 
 
 # redirige en fonction de l'erreur

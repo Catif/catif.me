@@ -5,9 +5,6 @@ if(!isset($card_class)){
 if(!isset($card_routeImg)){
     $routeImg = 'none';
 }
-if(!isset($card_routeImg)){
-    $routeImg = 'none';
-}
 ?>
 
 <?php if($card_class !== 'none'): ?>

@@ -6,11 +6,11 @@ use PHPMailer\PHPMailer\SMTP;
 
 $title = 'Contact - Catif';
 $page = 'contact';
-require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/header.php';
+require dirname(__DIR__, 1) . "/assets/components/header.php";
 
-require_once $_SERVER['DOCUMENT_ROOT'] .'/lib/PHPMailer/Exception.php';
-require_once $_SERVER['DOCUMENT_ROOT'] .'/lib/PHPMailer/PHPMailer.php';
-require_once $_SERVER['DOCUMENT_ROOT'] .'/lib/PHPMailer/SMTP.php';
+require_once PHP_ROOT .'/lib/PHPMailer/Exception.php';
+require_once PHP_ROOT .'/lib/PHPMailer/PHPMailer.php';
+require_once PHP_ROOT .'/lib/PHPMailer/SMTP.php';
 
 
 // Variable de la page
@@ -173,7 +173,8 @@ Je vous contact en rapport avec..."></textarea>
 
 <?php
 $absolute = true;
-require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/footer.php';
+require PHP_ROOT . '/assets/components/footer.php';
+
 ?>
 
     

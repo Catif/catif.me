@@ -1,7 +1,7 @@
 <?php
     $title = 'Moi - Catif';
     $page = 'me';
-    require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/header.php';
+    require dirname(__DIR__, 1) . "/assets/components/header.php";
 ?>
 
 
@@ -42,6 +42,6 @@
 
 <?php
     $absolute = false;
-    require $_SERVER['DOCUMENT_ROOT'] .'/assets/components/footer.php';
+    require PHP_ROOT . '/assets/components/footer.php';
 ?>
     
