@@ -23,7 +23,8 @@ require dirname(__DIR__, 2) . "/assets/components/header.php";
     ?>
 </div>
 
-<a class="button-site mt-40 mb-30" href="https://catif.me" target="_blank"><p class="text-large">Voir le site</p></a>
+<a class="button-site mt-40" href="https://catif.me" target="_blank"><p class="text-large">Voir le site</p></a>
+<a class="button-github mt-40 mb-30" href="https://github.com/Catif/catif.me" target="_blank"><p class="text-large">Voir le repository <i class="iconify" data-icon="akar-icons:github-fill"></i></p></a>
 
 
 

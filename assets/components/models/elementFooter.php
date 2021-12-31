@@ -1,17 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <li id="footer-<?= $footer_name ?>" class="footer-item">
     <i class="iconify" data-icon="<?= $footer_icon ?>"></i>
     <?php if(isset($footer_url[0])):?>
