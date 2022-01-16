@@ -29,7 +29,7 @@ if(isset($_POST['email-user']) and isset($_POST['name-user']) and isset($_POST['
                 $mail->Host = 'ssl://celtic.o2switch.net';
                 $mail->SMTPAuth = true;   
                 $mail->Username = 'no-reply@catif.me';
-                $mail->Password = 'hJZO(m?E;gBF';
+                $mail->Password = 'Hidden';
                 $mail->Port = 465;
 
                 // Charset
@@ -70,7 +70,7 @@ Voici le message que vous m'avez envoyé :
                 $mail2->Host = 'ssl://celtic.o2switch.net';
                 $mail->SMTPAuth = true;   
                 $mail2->Username = 'contact@catif.me';
-                $mail2->Password = 'zTRCyC84srRd$m5s';
+                $mail2->Password = 'Hidden';
                 $mail2->Port = 465;
 
                 // Charset
